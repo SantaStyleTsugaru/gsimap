@@ -91,7 +91,8 @@ const gsimap_init = function(map, layer) {
 			var lat = item.lat.value;
 			var lng = item.lng.value;
             var name = item.name.value;
-            
+            // ピンを追加
+	layer.addIcon(35.943560,136.188917, "鯖江駅")
             layer.addIcon(lat, lng, name, "icon/icon-green.png", 32, function(name) {
                 if (name.indexOf("秋吉") >= 0) {
                     alert("あたり！")
