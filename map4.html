@@ -66,7 +66,7 @@ CONFIG.DEFAULT = { CENTER : [ 35.943560, 136.188917 ], ZOOM : 17 };
 const gsimap_init = function(map, layer) {
     maplogo.textContent = "GSIMAP" // タイトル変更
 
-    layer.addIcon(35.943560, 136.188917, "鯖江駅", "icon/icon-purple.png", 32)
+    layer.addIcon(35.943560, 136.188917, "鯖江駅")
     layer.addIcon(35.942729, 136.198846, "めがね会館", "icon/icon-purple.png", 32)
 
     // SPARQLエンドポイント
@@ -91,8 +91,6 @@ const gsimap_init = function(map, layer) {
 			var lat = item.lat.value;
 			var lng = item.lng.value;
             var name = item.name.value;
-            // ピンを追加
-	layer.addIcon(35.943560,136.188917, "鯖江駅")
             layer.addIcon(lat, lng, name, "icon/icon-green.png", 32, function(name) {
                 if (name.indexOf("秋吉") >= 0) {
                     alert("あたり！")
